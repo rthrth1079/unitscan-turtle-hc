@@ -413,6 +413,9 @@ function unitscan_zone_targets()
         t["Tamra Stormpike"] = true
         t["Writhing Mage"] = true
 
+    elseif zone == "Lapidis Isle" then
+        t["Twisted Water Elemental"] = true
+
     elseif zone == "Ironforge" then
         t["Spectral Stalker"] = true
 
