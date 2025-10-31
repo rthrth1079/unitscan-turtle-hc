@@ -336,6 +336,7 @@ function unitscan_zone_targets()
 
     elseif zone == "Elwynn Forest" then
         t["Fedfennel"] = true
+		t["Forlorn Spirit"] = true
         t["Gruff Swiftbite"] = true
         t["Hogger"] = true
         t["Morgaine the Sly"] = true
@@ -990,3 +991,4 @@ function unitscan_zone_targets()
 
     end
 end
+
