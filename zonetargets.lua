@@ -902,7 +902,7 @@ function unitscan_zone_targets()
         t["Leprithus"] = true
         t["Marisa du'Paige"] = true
         t["Master Digger"] = true
-		t["Old Murk-Eye"] = true
+        t["Old Murk-Eye"] = true
         t["Reef Shark"] = true
         t["Sergeant Brashclaw"] = true
         t["Slark"] = true
@@ -992,5 +992,6 @@ function unitscan_zone_targets()
 
     end
 end
+
 
 
