@@ -80,6 +80,7 @@ function unitscan_zone_targets()
         t["Phantim"] = true
         t["Prince Raze"] = true
         t["Rorgish Jowl"] = true
+				t["Ruuzel"] = true
         t["Terrowulf Packlord"] = true
 				t["Shadumbra"] = true
 				t["Sharptalon"] = true
@@ -992,6 +993,7 @@ function unitscan_zone_targets()
 
     end
 end
+
 
 
 
