@@ -337,7 +337,7 @@ function unitscan_zone_targets()
 
     elseif zone == "Elwynn Forest" then
         t["Fedfennel"] = true
-		t["Forlorn Spirit"] = true
+        t["Forlorn Spirit"] = true
         t["Gruff Swiftbite"] = true
         t["Hogger"] = true
         t["Morgaine the Sly"] = true
@@ -406,6 +406,7 @@ function unitscan_zone_targets()
         t["Cursed Justicar"] = true
         t["Cursed Paladin"] = true
         t["Cyclonian"] = true
+				t["Forsaken Courier"] = true
         t["Hammerhead Shark"] = true
         t["Lady Zephris"] = true
         t["Milton Beats"] = true
@@ -927,7 +928,6 @@ function unitscan_zone_targets()
         t["Mirelow"] = true
         t["Razormaw Matriarch"] = true
         t["Red Dragonspawn"] = true
-        t["Red Dragonspawn"] = true
         t["Red Scalebane"] = true
         t["Red Wyrmkin"] = true
         t["Scalebane Lieutenant"] = true
@@ -993,7 +993,3 @@ function unitscan_zone_targets()
 
     end
 end
-
-
-
-
