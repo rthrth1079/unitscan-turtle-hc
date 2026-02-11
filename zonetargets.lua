@@ -675,6 +675,7 @@ function unitscan_zone_targets()
 
     elseif zone == "Tanaris" then
         t["Bone Witch"] = true
+        t["Caliph Scorpidsting"] = true
         t["Chronalis"] = true
         t["Coast Strider"] = true
         t["Cyclok the Mad"] = true
@@ -997,4 +998,3 @@ function unitscan_zone_targets()
 
     end
 end
-
