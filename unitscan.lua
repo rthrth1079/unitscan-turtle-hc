@@ -58,6 +58,10 @@ function unitscan.record_alert(name)
 	-- Force immediate SavedVariables write so external watcher picks it up
 	if SaveAddOnTable then
 		SaveAddOnTable("unitscan-turtle-hc", unitscan_alerts)
+	elseif SaveVariable then
+		SaveVariable("unitscan_alerts", unitscan_alerts)
+	elseif CharacterData and CharacterData.SetSavedVariable then
+		CharacterData:SetSavedVariable("unitscan_alerts", unitscan_alerts)
 	end
 end
 
