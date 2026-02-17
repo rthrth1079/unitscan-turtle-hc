@@ -55,6 +55,10 @@ function unitscan.record_alert(name)
 	local zone = GetZoneText and GetZoneText() or ""
 	local ts = (GetServerTime and GetServerTime()) or (time and time()) or 0
 	unitscan_alerts.last = { name = name, zone = zone, ts = ts }
+	-- Force immediate SavedVariables write so external watcher picks it up
+	if SaveAddOnTable then
+		SaveAddOnTable("unitscan-turtle-hc", unitscan_alerts)
+	end
 end
 
 do
