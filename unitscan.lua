@@ -101,6 +101,8 @@ do
 		for name, _ in unitscan_targets do
 			if name == unitscan.target(name) then
 				unitscan.foundTarget = name
+				-- record alert for external watcher
+				unitscan.record_alert(name)
 				unitscan.toggle_target(name)
 				unitscan.play_sound()
 				unitscan.flash.animation:Play()
