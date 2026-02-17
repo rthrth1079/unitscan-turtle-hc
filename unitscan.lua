@@ -47,6 +47,16 @@ local CHECK_INTERVAL = 1
 
 unitscan_targets = {}
 
+-- SavedVariable for external watcher to detect world-boss alerts
+unitscan_alerts = unitscan_alerts or {}
+
+function unitscan.record_alert(name)
+	unitscan_alerts = unitscan_alerts or {}
+	local zone = GetZoneText and GetZoneText() or ""
+	local ts = (GetServerTime and GetServerTime()) or (time and time()) or 0
+	unitscan_alerts.last = { name = name, zone = zone, ts = ts }
+end
+
 do
 	local last_played
 	
@@ -100,13 +110,15 @@ do
 		end
 
 		for name, _ in unitscan_zonetargets do
-			if strupper(name) == unitscan.target(name) then
-				unitscan.foundTarget = name		
-				unitscan.toggle_zonetarget(name)
-				unitscan.play_sound()
-				unitscan.flash.animation:Play()
-				unitscan.button:set_target()
-			end
+				if strupper(name) == unitscan.target(name) then
+					unitscan.foundTarget = name		
+					-- record alert for external watcher
+					unitscan.record_alert(name)
+					unitscan.toggle_zonetarget(name)
+					unitscan.play_sound()
+					unitscan.flash.animation:Play()
+					unitscan.button:set_target()
+				end
 			unitscan.restoreTarget()
 		end
 	end
